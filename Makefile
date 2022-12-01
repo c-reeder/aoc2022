@@ -1,8 +1,10 @@
 module=github.com/c-reeder/aoc2022
 current=d01
 
-d01:
-	go run $(module)/cmd/d01
+build:
+	go build -o ./bin $(module)/cmd/$(current)
 
-run:
-	go run $(module)/cmd/$(current)
+# Day-specific rules
+# E.g. "make d01"
+d%:
+	go build -o ./bin $(module)/cmd/$@
