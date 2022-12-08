@@ -1,5 +1,5 @@
 module=github.com/c-reeder/aoc2022
-current=d06
+current=d07
 
 build:
 	go build -o ./bin $(module)/cmd/$(current)
